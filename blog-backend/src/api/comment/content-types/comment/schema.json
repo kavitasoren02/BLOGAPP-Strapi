@@ -19,17 +19,18 @@
       "type": "blocks",
       "required": true
     },
-    "post": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::author.author"
-    },
     "email": {
       "type": "email",
       "required": false
     },
     "approved": {
       "type": "boolean"
+    },
+    "post": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::post.post",
+      "inversedBy": "comments"
     }
   }
 }
