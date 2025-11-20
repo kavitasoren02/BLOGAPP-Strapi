@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { blogApi, commentApi, type Blog } from '../services/api';
-import { useAuth } from '../context/AuthContext';
 
 export const BlogDetails: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
