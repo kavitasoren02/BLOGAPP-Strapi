@@ -81,7 +81,7 @@ export const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {blogs.map((blog, index) => {
               const coverImage = blog?.coverImage?.[0].url;
-              const imageUrl = coverImage ? `https://blogapp-strapi.onrender.com${coverImage}` : '/blog-cover.png';
+              const imageUrl = coverImage ? `${coverImage}` : '/blog-cover.png';
 
               return (
                 <Link
