@@ -141,6 +141,7 @@ export interface Blog {
 
 export interface Comment {
   id?: number,
+  post?: number,
   documentId?: string,
   userName: string,
   message: string,
