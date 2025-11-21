@@ -112,7 +112,7 @@ export const BlogDetails: React.FC = () => {
   }
 
   const coverImage = blog.coverImage?.[0].url;
-  const imageUrl = coverImage ? `https://blogapp-strapi.onrender.com${coverImage}` : '/blog-cover.png';
+  const imageUrl = coverImage ? `${coverImage}` : '/blog-cover.png';
 
   return (
     <div className="bg-[color:var(--color-bg)] py-12">
