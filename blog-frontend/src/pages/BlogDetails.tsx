@@ -57,7 +57,7 @@ export const BlogDetails: React.FC = () => {
       setIsSubmittingComment(true);
       await commentApi.createComment({
         ...newComment,
-        id: blog.id,
+        blog: blog.id,
       });
 
       // Add comment to local state
@@ -212,7 +212,7 @@ export const BlogDetails: React.FC = () => {
             {comments.length > 0 ? (
               comments.map((comment) => (
                 <div
-                  key={comment.id}
+                  key={comment.post}
                   className="bg-[color:var(--color-surface)] p-6 rounded-lg border border-[color:var(--color-border)] hover:border-[color:var(--color-primary)] transition-colors"
                 >
                   <div className="flex items-start justify-between mb-3">
