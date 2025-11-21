@@ -65,10 +65,8 @@ export const BlogDetails: React.FC = () => {
         ...comments,
         {
           id: Date.now(),
-          attributes: {
-            ...newComment,
-            createdAt: new Date().toISOString(),
-          },
+          ...newComment,
+          createdAt: new Date().toISOString(),
         },
       ]);
 
