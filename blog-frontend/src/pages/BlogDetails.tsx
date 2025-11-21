@@ -57,7 +57,7 @@ export const BlogDetails: React.FC = () => {
       setIsSubmittingComment(true);
       await commentApi.createComment({
         ...newComment,
-        blog: blog.id,
+        post: blog.id,
       });
 
       // Add comment to local state
